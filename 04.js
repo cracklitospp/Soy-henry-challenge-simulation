@@ -5,6 +5,15 @@
   No comentar la funcion 
 */
 
+function generateNumberInReverse(num) {
+  let numberInReverse = 0;
+  while(num > 0) {
+    numberInReverse = (numberInReverse * 10) + (num % 10);
+    num = Math.floor(num / 10);
+  }
+  return numberInReverse;
+}
+
 function numeroSimetrico(num) {
   // La funcion llamada 'numeroSimetrico' recibe como argumento un numero entero 'num'
   // Esta devuelve true o false dependiendo de si el número es simétrico o no. 
@@ -13,7 +22,7 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  return generateNumberInReverse(num) === num;
 }
 
 // No modifiques nada debajo de esta linea //
